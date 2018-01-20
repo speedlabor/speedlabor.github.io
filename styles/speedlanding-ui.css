@@ -1,0 +1,173 @@
+/*
+
+  ============= - =============
+  S P E E D L A N D I N G - U I
+  ============= - =============
+
+*/
+
+/* main */
+
+body {
+  color: #263238;
+  margin: 0;
+}
+
+article {
+  margin: 0 auto;
+  width: 600px;
+}
+
+article > header {
+  background-color: #607D8B;
+  border-bottom: .2em solid #263238;
+  border-radius: 0 0 .2em .2em;
+  font-size: 2em;
+  padding-top: 10%;
+  text-align: center;
+}
+
+article > header > h1 {
+  margin: 0;
+  margin-bottom: -0.1em;
+}
+
+article > section > :not(section) {
+  padding: .3em .2em;
+}
+
+article > section > h2 {
+  border-bottom: .1em solid #607D8B;
+  border-top: .1em solid #607D8B;
+  margin: 0;
+}
+
+article > section:first-of-type > h2 {
+  border-top: 0;
+}
+
+article > section > h3 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+article > section > h2:first-letter,
+article > section > h3:first-letter {
+  text-transform: uppercase;
+}
+
+article > section > p {
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+article > section > p:first-of-type {
+  font-size: 1.25em;
+  line-height: 1.5;
+}
+
+article > section > p:first-of-type:first-letter {
+  color: #607D8B;
+  float: left;
+  font-size: 3.1em;
+  margin: .2em .2em 0 0;
+}
+
+article > footer {
+  border-top: .2em solid #607D8B;
+  color: #90A4AE; //blue-gray-300
+  padding: .3em .2em;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+article > footer > :first-child {
+  font-size: 1em;
+}
+
+article > footer > p {
+  font-family: arial;
+  font-size: 0.75em;
+}
+
+/* section.colapse */
+
+section.colapse > input[type="checkbox"],
+section.colapse > :not(:last-child)  {
+  display: none;
+}
+
+section.colapse > :last-child {
+  text-align: center;
+  width: 100%;
+}
+
+section.colapse > :last-child > label {
+  color: #CFD8DC;
+  font-size: 2.5em;
+}
+
+section.colapse > :last-child > label:hover {
+  color: #607D8B;
+}
+
+section.colapse > :last-child > label:before {
+  content: "▼"
+}
+
+section.colapse > input:checked ~ :last-child > label:before {
+  content: "▲"
+}
+
+section.colapse > input:checked ~ :not(:last-child) {
+  display: block;
+}
+
+/* ul.bookmarks */
+
+ul.bookmarks {
+  overflow: auto;
+  padding: 0;
+}
+
+ul.bookmarks > li {
+  display: inline-block;
+  float: left;
+  max-width: 200px;
+  width: 200px;
+}
+
+ul.bookmarks > li > div {
+  border-radius: 5px;
+  font-size: 10px;
+  height: 80px;
+  margin: .5em;
+  max-height: 80px;
+  padding: .5em;
+  position: relative;
+}
+
+ul.bookmarks > li > div:hover {
+  background-color: #CFD8DC;
+}
+
+ul.bookmarks > li > div > a {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+ul.bookmarks > li > div > p:first-of-type {
+  border-bottom: .1em solid #263238;
+  font-size: 2em;
+  margin: 0;
+}
+
+ul.bookmarks > li > div > p:not(:first-of-type) {
+  font-family: arial;
+  font-size: 1.25em;
+  margin: .5em 0;
+}
